@@ -1,0 +1,11 @@
+# Naïve implementation: 521MB
+# Note: /root/.m2 is 10MB; this include all of Maven's dependencies
+
+FROM maven:3.9.6-eclipse-temurin-21
+
+RUN mkdir /app
+COPY . /app
+WORKDIR /app
+RUN mvn package
+
+ENTRYPOINT ["java", "-jar", "target/javadocker-0.1.jar"]
