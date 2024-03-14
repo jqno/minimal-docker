@@ -1,4 +1,6 @@
 # GraalVM native image FROM scratch: 16MB
+# Note that we need to link in libc;
+# we do this using the `--static` flag in the `graal-static` Maven profile
 
 FROM ghcr.io/graalvm/graalvm-community:21 AS build
 
