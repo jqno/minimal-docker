@@ -1,13 +1,13 @@
 # Multi-stage build with small base image: 202MB
 
-FROM maven:3.9.6-eclipse-temurin-21 AS build
+FROM maven:3.9.13-eclipse-temurin-25 AS build
 
 RUN mkdir /app
 COPY . /app
 WORKDIR /app
 RUN mvn package
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:25-jre-alpine
 
 RUN mkdir /app
 COPY --from=build /app /app

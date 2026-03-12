@@ -10,8 +10,8 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
     </properties>
 
     <build>
@@ -19,7 +19,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.5.0</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -39,7 +39,7 @@
                     <plugin>
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
-                        <version>0.10.1</version>
+                        <version>0.11.5</version>
                         <executions>
                             <execution>
                                 <id>build-native</id>
@@ -61,7 +61,7 @@
                     <plugin>
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
-                        <version>0.10.1</version>
+                        <version>0.11.5</version>
                         <executions>
                             <execution>
                                 <id>build-native</id>
@@ -71,6 +71,7 @@
                                 </goals>
                                 <configuration>
                                     <buildArgs>
+                                        <buildArg>--libc=musl</buildArg>
                                         <buildArg>--static</buildArg>
                                     </buildArgs>
                                 </configuration>

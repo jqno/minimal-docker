@@ -6,11 +6,11 @@ The application itself is absolutely minimal to highlight the differences betwee
 
 | Dockerfile   | Image size | Description                                  |
 | ------------ | ---------- | -------------------------------------------- |
-| Dockerfile.1 | 521 MB     | Naïve: build and distribute the same image   |
-| Dockerfile.2 | 436 MB     | Multi-stage: separate build and distribution |
-| Dockerfile.3 | 202 MB     | Multi-stage, but with a minimal base image   |
-| Dockerfile.4 | 115 MB     | JLink to reduce JRE size                     |
-| Dockerfile.5 | 89 MB      | GraalVM native image; no JDK needed at all   |
-| Dockerfile.6 | 16 MB      | GraalVM native image; no Linux needed either |
+| Dockerfile.1 | 507 MB     | Naïve: build and distribute the same image   |
+| Dockerfile.2 | 397 MB     | Multi-stage: separate build and distribution |
+| Dockerfile.3 | 227 MB     | Multi-stage, but with a minimal base image   |
+| Dockerfile.4 | 124 MB     | JLink to reduce JRE size                     |
+| Dockerfile.5 | 94.3 MB    | GraalVM native image; no JDK needed at all   |
+| Dockerfile.6 | 13.4 MB    | GraalVM native image; no Linux needed either |
 
 Credits: many of these techniques were taken from Brian Vermeer's talk at Devoxx UK 2023: [Securing Your Java Containers by Breaking In](https://www.youtube.com/watch?v=d4Xfnc-v8S8)

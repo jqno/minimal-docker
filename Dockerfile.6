@@ -2,10 +2,10 @@
 # Note that we need to link in libc;
 # we do this using the `--static` flag in the `graal-static` Maven profile
 
-FROM ghcr.io/graalvm/graalvm-community:21 AS build
+FROM ghcr.io/graalvm/native-image-community:25-muslib AS build
 
 RUN mkdir /opt/maven \
- && curl -fL https://repo1.maven.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.tar.gz | tar xz -C /opt/maven --strip-components=1
+ && curl -fL https://repo1.maven.org/maven2/org/apache/maven/apache-maven/3.9.14/apache-maven-3.9.14-bin.tar.gz | tar xz -C /opt/maven --strip-components=1
 
 ENV \
   PATH="/opt/maven/bin:${PATH}" \
